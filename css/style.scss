@@ -1,0 +1,1415 @@
+@import "app.scss";
+
+.wrapper {
+  position: relative;
+  .inner-wrapper {
+    @include media-desktop(xxxl-screen) {
+      padding: 50px 200px;
+    }
+    @include media-screens(medium-desktop) {
+      padding: 50px 200px;
+    }
+    @include media-desktop(xl-screen) {
+      padding: 30px 120px;
+    }
+    @include media-desktop(lg-screen) {
+      padding: 20px 80px;
+    }
+    @include media-desktop(sm-screen) {
+      padding: 20px 50px;
+    }
+    padding: 30px 150px;
+    position: relative;
+    nav {
+      .navbar-outer {
+        @include media-desktop(sm-screen) {
+          flex-direction: column;
+          justify-content: center;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbar-logo {
+          img {
+            @include media-desktop(xl-screen) {
+              width: 80%;
+            }
+            @include media-desktop(lg-screen) {
+              width: 50%;
+            }
+            @include media-desktop(sm-screen) {
+              margin-bottom: 20px;
+              width: 90%;
+            }
+          }
+        }
+      }
+      .navbar-outer .navbar-items {
+        .menu-items {
+          display: flex;
+          list-style-type: none;
+        }
+        .menu-items .list-menu-items {
+          @include media-desktop(xxxl-screen) {
+            padding-inline: 25px;
+          }
+          @include media-screens(medium-desktop) {
+            padding-inline: 20px;
+          }
+          @include media-desktop(xl-screen) {
+            padding-inline: 10px;
+          }
+          @include media-desktop(lg-screen) {
+            padding-inline: 8px;
+          }
+          @include media-desktop(sm-screen) {
+            padding-inline: 5px;
+          }
+          padding-inline: 15px;
+          &:first-child {
+            padding-inline-start: 0;
+          }
+          &:last-child {
+            padding-inline-end: 0;
+          }
+          a {
+            @include media-desktop(xxxl-screen) {
+              font-size: $lg-text;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text;
+            }
+            @include media-desktop(xl-screen) {
+              font-size: $md-text;
+            }
+            @include media-desktop(lg-screen) {
+              font-size: $small-text;
+            }
+            @include media-desktop(sm-screen) {
+              font-size: $ex-small-text;
+            }
+            color: $gray-color;
+            &:hover {
+              color: $primary-color;
+            }
+          }
+          .active {
+            color: $black-color;
+            font-weight: $medium;
+          }
+        }
+      }
+    }
+    header {
+      position: relative;
+      margin-top: 80px;
+      .header-area {
+        @include media-desktop(sm-screen) {
+          justify-content: center;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-left-area {
+          h1 {
+            margin-bottom: 30px;
+          }
+          p {
+            @include media-desktop(xxxl-screen) {
+              font-size: $lg-text2;
+              margin-bottom: 60px;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text1;
+              margin-bottom: 50px;
+            }
+            @include media-desktop(xl-screen) {
+              font-size: $md-text;
+            }
+            br {
+              @include media-desktop(sm-screen) {
+                display: none;
+              }
+            }
+            margin-bottom: 30px;
+            color: $gray-color;
+            font-size: $default-text;
+            line-height: 1.6;
+          }
+          a > button {
+            @include media-desktop(xxxl-screen) {
+              font-size: $lg-text;
+              padding: 18px 50px;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text;
+              padding: 17px 50px;
+            }
+            @include media-desktop(xl-screen) {
+              padding: 12px 30px;
+            }
+            @include media-desktop(lg-screen) {
+              padding: 10px 20px;
+            }
+            @include media-desktop(sm-screen) {
+              padding: 8px 15px;
+            }
+            padding: 15px 40px;
+          }
+        }
+        .header-right-area {
+          @include media-desktop(med-screen) {
+            display: none;
+          }
+          img {
+            @include media-desktop(xxxl-screen) {
+              width: 800px;
+            }
+            @include media-screens(medium-desktop) {
+              width: 700px;
+            }
+            @include media-desktop(xl-screen) {
+              width: 400px;
+            }
+            @include media-desktop(lg-screen) {
+              width: 280px;
+            }
+
+            width: 550px;
+          }
+        }
+      }
+      .element-header {
+        @include media-desktop(xxxl-screen) {
+          left: -200px;
+          height: 500px;
+        }
+        @include media-screens(medium-desktop) {
+          left: -190px;
+          height: 500px;
+        }
+        @include media-desktop(med-screen) {
+          left: 90%;
+        }
+        @include media-desktop(sm-screen) {
+          left: 95%;
+        }
+        position: absolute;
+        top: 0;
+        left: -150px;
+        img {
+          @include media-desktop(xxxl-screen) {
+            height: 160px;
+          }
+          @include media-screens(medium-desktop) {
+            height: 150px;
+          }
+          @include media-desktop(med-screen) {
+            height: 100px;
+          }
+        }
+      }
+    }
+    .our-services {
+      @include media-desktop(xxxl-screen) {
+        margin-block: 150px;
+      }
+      @include media-screens(medium-desktop) {
+        margin-block: 140px;
+      }
+      @include media-desktop(xl-screen) {
+        margin-block: 100px;
+      }
+      @include media-desktop(lg-screen) {
+        margin-block: 80px;
+      }
+      @include media-desktop(med-screen) {
+        margin-block: 60px;
+      }
+      @include media-desktop(sm-screen) {
+        margin-block: 40px;
+        padding-inline: 10px;
+      }
+      margin-block: 120px;
+      padding-inline: 50px;
+      z-index: 999999;
+      h2 {
+        @include media-desktop(xxxl-screen) {
+          padding-bottom: 25px;
+        }
+        @include media-screens(medium-desktop) {
+          padding-bottom: 20px;
+        }
+        @include media-desktop(xl-screen) {
+          padding-bottom: 10px;
+        }
+        text-align: center;
+        padding-bottom: 15px;
+      }
+      .service-desc-text {
+        @include media-desktop(xxxl-screen) {
+          font-size: $lg-text;
+          padding-inline: 210px;
+          line-height: 28px;
+        }
+        @include media-screens(medium-desktop) {
+          font-size: $default-text;
+          padding-inline: 190px;
+          line-height: 26px;
+        }
+        @include media-desktop(xl-screen) {
+          padding-inline: 50px;
+          line-height: 22px;
+        }
+        @include media-desktop(lg-screen) {
+          padding-inline: 20px;
+          line-height: 20px;
+        }
+        @include media-desktop(med-screen) {
+          padding-inline: 15px;
+        }
+        @include media-desktop(sm-screen) {
+          padding-inline: 0;
+        }
+        text-align: center;
+        color: $gray-color;
+        font-size: $md-text;
+        line-height: 24px;
+        padding-inline: 150px;
+        margin-top: 20px;
+      }
+      .service-categories {
+        @include media-desktop(lg-screen) {
+          margin-top: 50px;
+        }
+        @include media-desktop(med-screen) {
+          margin-top: 40px;
+        }
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        position: relative;
+        .service-cards {
+          @include media-desktop(xxxl-screen) {
+            max-width: 400px;
+            height: 390px;
+            padding: 60px 50px;
+            margin-inline: 20px;
+          }
+          @include media-screens(medium-desktop) {
+            max-width: 380px;
+            height: 390px;
+            padding: 50px 40px;
+            margin-inline: 15px;
+          }
+          @include media-desktop(xl-screen) {
+            // max-width: 210px;
+            height: 280px;
+            padding: 25px 30px;
+            margin-inline: 5px;
+            justify-content: space-evenly;
+          }
+          @include media-desktop(lg-screen) {
+            max-width: 210px;
+            height: 280px;
+            padding: 20px;
+          }
+          @include media-desktop(med-screen) {
+            max-width: 75%;
+            height: 280px;
+            padding: 20px;
+          }
+          @include media-desktop(sm-screen) {
+            max-width: 100%;
+          }
+          box-shadow: 10px 40px 50px $box-shadow;
+          background-color: $white-color;
+          border-radius: 20px;
+          margin-bottom: 30px;
+          max-width: 300px;
+          height: 290px;
+          z-index: 20;
+          margin-inline: 5px;
+          padding: 40px 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          .small-img {
+            @include media-desktop(xxxl-screen) {
+              width: 85px;
+            }
+            @include media-screens(medium-desktop) {
+              width: 75px;
+            }
+            @include media-desktop(xl-screen) {
+              width: 55px;
+            }
+            @include media-desktop(lg-screen) {
+              width: 45px;
+            }
+            @include media-desktop(med-screen) {
+              width: 55px;
+            }
+            width: 65px;
+          }
+          .med-imgs {
+            @include media-desktop(xxxl-screen) {
+              width: 75px;
+            }
+            @include media-screens(medium-desktop) {
+              width: 65px;
+            }
+            @include media-desktop(xl-screen) {
+              width: 35px;
+            }
+            @include media-desktop(lg-screen) {
+              width: 30px;
+            }
+            @include media-desktop(med-screen) {
+              width: 45px;
+            }
+            width: 45px;
+          }
+          h4 {
+            @include media-desktop(xxxl-screen) {
+              font-size: $xl-text;
+              margin-block: 40px;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text3;
+              margin-block: 20px;
+            }
+            @include media-desktop(lg-screen) {
+              font-size: $default-text;
+            }
+            @include media-desktop(med-screen) {
+              font-size: $default-text;
+            }
+            font-weight: $bold;
+          }
+          p {
+            @include media-desktop(xxxl-screen) {
+              font-size: $lg-text;
+              line-height: 28px;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $default-text;
+              line-height: 26px;
+            }
+            @include media-desktop(lg-screen) {
+              line-height: 22px;
+            }
+            font-size: $small-text;
+            line-height: 24px;
+            color: $gray-color;
+          }
+        }
+        .element-services {
+          @include media-desktop(xxxl-screen) {
+            left: 85%;
+            top: 34.5%;
+          }
+          @include media-screens(medium-desktop) {
+            left: 89%;
+            top: 36.5%;
+          }
+          @include media-desktop(xl-screen) {
+            left: 87%;
+            top: 41%;
+          }
+          @include media-desktop(med-screen) {
+            left: 90%;
+            top: 46%;
+          }
+          position: absolute;
+          left: 90%;
+          top: 35%;
+          img {
+            @include media-desktop(xxxl-screen) {
+              height: 160px;
+            }
+            @include media-screens(medium-desktop) {
+              height: 140px;
+            }
+          }
+        }
+      }
+      .learn-more-btn {
+        @include media-desktop(xxxl-screen) {
+          padding-block: 40px;
+        }
+        @include media-screens(medium-desktop) {
+          padding-block: 30px;
+        }
+        display: flex;
+        justify-content: center;
+        padding-block: 20px;
+        a > button {
+          @include media-desktop(xxxl-screen) {
+            padding: 15px 50px;
+            font-size: $lg-text;
+          }
+          @include media-screens(medium-desktop) {
+            padding: 15px 45px;
+            font-size: $lg-text;
+          }
+          @include media-desktop(lg-screen) {
+            padding: 8px 20px;
+          }
+        }
+      }
+    }
+    .healthcare-section {
+      @include media-desktop(xxxl-screen) {
+        margin-block: 150px;
+      }
+      @include media-screens(medium-desktop) {
+        margin-block: 140px;
+      }
+      @include media-desktop(xl-screen) {
+        margin-block: 100px;
+      }
+      @include media-desktop(lg-screen) {
+        margin-block: 80px;
+      }
+      @include media-desktop(sm-screen) {
+        margin-block: 40px;
+      }
+      margin-block: 120px;
+      .outer-healthcare {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left-img-area {
+          @include media-desktop(med-screen) {
+            display: none;
+          }
+          img {
+            @include media-desktop(xxxl-screen) {
+              width: 700px;
+            }
+            @include media-screens(medium-desktop) {
+              width: 600px;
+            }
+            @include media-desktop(xl-screen) {
+              width: 400px;
+            }
+            @include media-desktop(lg-screen) {
+              width: 300px;
+            }
+            width: 500px;
+          }
+        }
+        .right-desc-area {
+          @include media-desktop(xxxl-screen) {
+            max-width: 650px;
+          }
+          @include media-screens(medium-desktop) {
+            max-width: 600px;
+          }
+          @include media-desktop(xl-screen) {
+            max-width: 100%;
+            padding-left: 50px;
+          }
+          @include media-desktop(lg-screen) {
+            padding-left: 30px;
+          }
+          @include media-desktop(med-screen) {
+            max-width: 75%;
+          }
+          @include media-desktop(sm-screen) {
+            max-width: 100%;
+          }
+          display: flex;
+          flex-direction: column;
+          max-width: 450px;
+          h2 {
+            @include media-desktop(xxxl-screen) {
+              padding-right: 180px;
+              margin-bottom: 20px;
+            }
+            @include media-screens(medium-desktop) {
+              padding-right: 180px;
+              margin-bottom: 20px;
+            }
+            @include media-desktop(med-screen) {
+              padding-right: 100px;
+            }
+            @include media-desktop(sm-screen) {
+              padding-right: 20px;
+            }
+            margin-bottom: 10px;
+          }
+          p {
+            @include media-desktop(xxxl-screen) {
+              line-height: 28px;
+              margin-block: 30px;
+              font-size: $lg-text;
+              padding-right: 170px;
+            }
+            @include media-screens(medium-desktop) {
+              line-height: 26px;
+              margin-block: 20px;
+              font-size: $lg-text;
+              padding-right: 170px;
+            }
+            @include media-desktop(xl-screen) {
+              color: $gray-color;
+              line-height: 22px;
+              font-size: $md-text;
+              margin-bottom: 15px;
+            }
+            @include media-desktop(lg-screen) {
+              line-height: 20px;
+              font-size: $small-text;
+              margin-bottom: 15px;
+            }
+
+            color: $gray-color;
+            line-height: 24px;
+            font-size: $default-text;
+            margin-bottom: 20px;
+          }
+          .learn-more {
+            margin-top: 15px;
+            a > button {
+              @include media-desktop(xxxl-screen) {
+                padding: 15px 50px;
+                font-size: $lg-text;
+              }
+              @include media-screens(medium-desktop) {
+                padding: 15px 45px;
+                font-size: $lg-text;
+              }
+              @include media-desktop(xl-screen) {
+                padding: 10px 25px;
+              }
+              @include media-desktop(lg-screen) {
+                padding: 10px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobile-app-section {
+      @include media-desktop(xxxl-screen) {
+        margin-block: 150px;
+      }
+      @include media-screens(medium-desktop) {
+        margin-block: 140px;
+      }
+      @include media-desktop(xl-screen) {
+        margin-block: 100px;
+      }
+      @include media-desktop(lg-screen) {
+        margin-block: 80px;
+      }
+      @include media-desktop(med-screen) {
+        margin-block: 60px;
+      }
+      @include media-desktop(sm-screen) {
+        margin-block: 40px;
+      }
+      margin-block: 120px;
+      .outer-mobile-app {
+        @include media-desktop(med-screen) {
+          // justify-content: center;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left-desc-area {
+          @include media-desktop(xxxl-screen) {
+            max-width: 650px;
+            margin-left: 140px;
+          }
+          @include media-screens(medium-desktop) {
+            max-width: 550px;
+            margin-left: 120px;
+          }
+          @include media-desktop(xl-screen) {
+            max-width: 300px;
+            margin-left: 40px;
+          }
+          @include media-desktop(lg-screen) {
+            max-width: 100%;
+            margin-left: 30px;
+          }
+          @include media-desktop(med-screen) {
+            max-width: 75%;
+          }
+          @include media-desktop(sm-screen) {
+            max-width: 100%;
+          }
+          max-width: 400px;
+          margin-left: 70px;
+          h2 {
+            @include media-desktop(xxxl-screen) {
+              padding-right: 180px;
+              margin-bottom: 20px;
+            }
+            @include media-screens(medium-desktop) {
+              padding-right: 180px;
+              margin-bottom: 20px;
+            }
+            margin-bottom: 10px;
+          }
+          p {
+            @include media-desktop(xxxl-screen) {
+              line-height: 28px;
+              margin-block: 30px;
+              font-size: $lg-text;
+              padding-right: 170px;
+            }
+            @include media-screens(medium-desktop) {
+              line-height: 26px;
+              margin-block: 30px;
+              font-size: $lg-text;
+              padding-right: 170px;
+            }
+            @include media-desktop(xl-screen) {
+              line-height: 22px;
+              font-size: $md-text;
+              margin-bottom: 15px;
+            }
+            @include media-desktop(lg-screen) {
+              line-height: 20px;
+              font-size: $small-text;
+              margin-bottom: 12px;
+            }
+            color: $gray-color;
+            line-height: 24px;
+            font-size: $default-text;
+            margin-bottom: 20px;
+            padding-inline-end: 20px;
+          }
+          .download-btn {
+            margin-top: 30px;
+            a > button {
+              @include media-desktop(xxxl-screen) {
+                padding: 15px 50px;
+                font-size: $lg-text;
+              }
+              @include media-screens(medium-desktop) {
+                padding: 15px 45px;
+                font-size: $lg-text;
+              }
+              @include media-desktop(xl-screen) {
+                padding: 10px 30px;
+              }
+              @include media-desktop(lg-screen) {
+                padding: 8px 25px;
+              }
+            }
+          }
+        }
+        .right-img-area {
+          @include media-desktop(med-screen) {
+            display: none;
+          }
+          img {
+            @include media-desktop(xxxl-screen) {
+              width: 800px;
+            }
+            @include media-screens(medium-desktop) {
+              width: 700px;
+            }
+            @include media-desktop(xl-screen) {
+              width: 450px;
+            }
+            @include media-desktop(lg-screen) {
+              width: 350px;
+            }
+            width: 550px;
+          }
+        }
+      }
+    }
+    .customer-feedback-section {
+      @include media-desktop(xxxl-screen) {
+        margin: 150px 80px;
+      }
+      @include media-screens(medium-desktop) {
+        margin: 140px 80px;
+      }
+      @include media-desktop(xl-screen) {
+        margin: 130px 30px;
+      }
+      @include media-desktop(lg-screen) {
+        margin: 100px 20px;
+      }
+      @include media-desktop(med-screen) {
+        margin: 80px 10px;
+      }
+      @include media-desktop(sm-screen) {
+        margin: 60px 10px;
+      }
+      margin: 150px 50px;
+      position: relative;
+      .inner-bg {
+        @include media-desktop(xxxl-screen) {
+          padding: 80px 140px;
+        }
+        @include media-screens(medium-desktop) {
+          padding: 80px 120px;
+        }
+        @include media-desktop(xl-screen) {
+          padding: 50px 60px;
+        }
+        @include media-desktop(lg-screen) {
+          padding: 40px 50px;
+        }
+        @include media-desktop(med-screen) {
+          padding: 30px;
+        }
+        @include media-desktop(sm-screen) {
+          padding: 20px;
+        }
+        background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+        border-radius: 24px;
+        padding: 70px 100px;
+        position: relative;
+        h3 {
+          @include media-desktop(xxxl-screen) {
+            font-size: $header-h2;
+          }
+          @include media-screens(medium-desktop) {
+            font-size: $header-h3;
+          }
+          @include media-desktop(xl-screen) {
+            font-size: $xxxl-text;
+          }
+          @include media-desktop(lg-screen) {
+            font-size: $xxl-text;
+          }
+          @include media-desktop(med-screen) {
+            font-size: $xl-text;
+          }
+          @include media-desktop(sm-screen) {
+            font-size: $lg-text2;
+          }
+          text-align: center;
+        }
+        .hr-center-white-bg {
+          @include media-desktop(xxxl-screen) {
+            margin-block: 40px;
+          }
+          @include media-screens(medium-desktop) {
+            margin-block: 30px;
+          }
+          margin-block: 20px;
+        }
+        .element-feedback {
+          @include media-desktop(xl-screen) {
+            right: -32px;
+            top: -10px;
+          }
+          position: absolute;
+          right: -45px;
+          top: -15px;
+          img {
+            @include media-desktop(xl-screen) {
+              height: 80px;
+            }
+          }
+        }
+      }
+      .inner-bg .feeback-area {
+        @include media-desktop(sm-screen) {
+          flex-direction: column;
+          margin-top: 50px;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 70px;
+        .person-info {
+          @include media-desktop(sm-screen) {
+            margin-bottom: 20px;
+          }
+          display: flex;
+          align-items: center;
+          flex: 6;
+          img {
+            @include media-desktop(xxxl-screen) {
+              height: 160px;
+            }
+            @include media-screens(medium-desktop) {
+              height: 140px;
+            }
+            @include media-desktop(xl-screen) {
+              height: 100px;
+            }
+            @include media-desktop(lg-screen) {
+              height: 80px;
+            }
+            border-radius: 50%;
+            border: 5px solid $white-color;
+            height: 120px;
+          }
+          .name {
+            @include media-desktop(xxxl-screen) {
+              margin-left: 30px;
+              line-height: 35px;
+            }
+            @include media-screens(medium-desktop) {
+              margin-left: 25px;
+              line-height: 30px;
+            }
+            @include media-desktop(xl-screen) {
+              line-height: 25px;
+            }
+            @include media-desktop(lg-screen) {
+              margin-left: 15px;
+            }
+            margin-left: 20px;
+            color: $white-color;
+            line-height: 30px;
+            .f-name {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text2;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text1;
+              }
+              @include media-desktop(xl-screen) {
+                font-size: $default-text;
+              }
+              @include media-desktop(lg-screen) {
+                font-size: $md-text;
+              }
+              font-weight: $bold;
+              font-size: $lg-text;
+            }
+            .more-info {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text1;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text;
+              }
+              @include media-desktop(lg-screen) {
+                font-size: $small-text;
+              }
+              color: rgba($white-color, 0.8);
+              font-weight: $normal;
+            }
+          }
+        }
+        .comments {
+          flex: 6;
+          p {
+            @include media-desktop(xxxl-screen) {
+              line-height: 28px;
+              font-size: $lg-text1;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text;
+            }
+            @include media-desktop(xl-screen) {
+              font-size: $md-text;
+              line-height: 22px;
+            }
+            @include media-desktop(lg-screen) {
+              font-size: $small-text;
+            }
+            color: $white-color;
+            line-height: 24px;
+            font-weight: $normal;
+          }
+        }
+      }
+      .next-prev {
+        @include media-desktop(xxxl-screen) {
+          margin-block-start: 40px;
+        }
+        @include media-screens(medium-desktop) {
+          margin-block-start: 40px;
+        }
+        margin-block-start: 20px;
+        display: flex;
+        justify-content: center;
+        .inner {
+          @include media-desktop(xxxl-screen) {
+            width: 300px;
+          }
+          @include media-screens(medium-desktop) {
+            width: 250px;
+          }
+          display: flex;
+          align-items: center;
+          width: 200px;
+          justify-content: space-between;
+        }
+        .inner .center-dots {
+          .fa-circle {
+            @include media-desktop(xxxl-screen) {
+              font-size: $md-text;
+              padding-inline: 10px;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $small-text;
+              padding-inline: 7px;
+            }
+            @include media-desktop(med-screen) {
+              font-size: $smallest-text;
+            }
+            font-size: $ex-small-text;
+            color: rgba($primary-color, 0.3);
+            padding-inline: 5px;
+          }
+        }
+        .inner .left-arrow {
+          @include media-desktop(xxxl-screen) {
+            font-size: $xxl-text;
+          }
+          @include media-screens(medium-desktop) {
+            font-size: $xl-text;
+          }
+          @include media-desktop(med-screen) {
+            font-size: $default-text;
+          }
+          color: rgba($primary-color, 0.3);
+          font-size: $lg-text3;
+        }
+        .inner .right-arrow {
+          @include media-desktop(xxxl-screen) {
+            font-size: $xxl-text;
+          }
+          @include media-screens(medium-desktop) {
+            font-size: $xl-text;
+          }
+          @include media-desktop(med-screen) {
+            font-size: $default-text;
+          }
+          color: $primary-color;
+          font-size: $lg-text3;
+        }
+      }
+      .element-feedback-left {
+        @include media-desktop(xl-screen) {
+          left: -35px;
+        }
+        position: absolute;
+        left: -52px;
+        bottom: 70px;
+        z-index: -1;
+        img {
+          @include media-desktop(xl-screen) {
+            height: 70px;
+          }
+        }
+      }
+    }
+    .articles-section {
+      @include media-desktop(xxxl-screen) {
+        margin-block: 150px;
+      }
+      @include media-screens(medium-desktop) {
+        margin-block: 140px;
+      }
+      @include media-desktop(xl-screen) {
+        margin-block: 100px;
+      }
+      @include media-desktop(lg-screen) {
+        margin-block: 80px;
+      }
+      margin-block: 120px;
+      position: relative;
+      h2 {
+        @include media-desktop(xxxl-screen) {
+          padding-bottom: 25px;
+          font-size: $header-h2;
+        }
+        @include media-screens(medium-desktop) {
+          padding-bottom: 25px;
+          font-size: $header-h3;
+        }
+        @include media-desktop(lg-screen) {
+          padding-bottom: 10px;
+        }
+        text-align: center;
+        padding-bottom: 15px;
+      }
+      .articles-categories {
+        @include media-desktop(xxxl-screen) {
+          margin-top: 100px;
+        }
+        @include media-screens(medium-desktop) {
+          margin-top: 85px;
+        }
+        @include media-desktop(xl-screen) {
+          margin-top: 50px;
+        }
+        @include media-desktop(lg-screen) {
+          margin-top: 40px;
+        }
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        .articles-cards {
+          @include media-desktop(xxxl-screen) {
+            width: 420px;
+            margin: 0 15px 30px 15px;
+          }
+          @include media-screens(medium-desktop) {
+            width: 350px;
+            margin: 0 15px 30px 15px;
+          }
+          @include media-desktop(xl-screen) {
+            width: 250px;
+          }
+          @include media-desktop(lg-screen) {
+            width: 230px;
+          }
+          background-color: $white-color;
+          box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+          border-radius: 20px;
+          margin: 0 5px 30px 5px;
+          width: 320px;
+          z-index: 30;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          img {
+            @include media-desktop(xxxl-screen) {
+              height: 300px;
+            }
+            @include media-screens(medium-desktop) {
+              height: 250px;
+            }
+            @include media-desktop(xl-screen) {
+              height: 160px;
+            }
+            @include media-desktop(lg-screen) {
+              height: 140px;
+            }
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            width: 100%;
+            height: 200px;
+          }
+          .articles-content-area {
+            @include media-desktop(xxxl-screen) {
+              padding: 40px 40px 50px 40px;
+            }
+            @include media-screens(medium-desktop) {
+              padding: 30px 30px 40px 30px;
+            }
+            @include media-desktop(xl-screen) {
+              padding: 20px 20px 25px 20px;
+            }
+            padding: 25px 25px 30px 25px;
+            h4 {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text3;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text2;
+              }
+              @include media-desktop(xl-screen) {
+                font-size: $md-text;
+                margin-bottom: 15px;
+              }
+              font-weight: $bold;
+              font-size: $lg-text;
+              margin-bottom: 20px;
+            }
+            p {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text;
+                line-height: 22px;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $default-text;
+                line-height: 20px;
+              }
+              @include media-desktop(xl-screen) {
+                margin-bottom: 20px;
+                font-size: $small-text;
+              }
+              font-size: $md-text;
+              line-height: 16px;
+              color: $gray-color;
+              margin-bottom: 30px;
+            }
+            a {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text;
+              }
+              @include media-desktop(xl-screen) {
+                font-size: $md-text;
+              }
+              color: $primary-color;
+              display: flex;
+              align-items: center;
+              .read-more-text {
+                @include media-desktop(xl-screen) {
+                  font-size: $md-text;
+                }
+                padding-right: 15px;
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+      }
+      .learn-more-btn {
+        @include media-desktop(xxxl-screen) {
+          padding-block: 40px;
+        }
+        display: flex;
+        justify-content: center;
+        padding-block: 20px;
+        a > button {
+          @include media-desktop(xxxl-screen) {
+            padding: 15px 50px;
+            font-size: $lg-text;
+          }
+          @include media-screens(medium-desktop) {
+            padding: 15px 40px;
+            font-size: $lg-text;
+          }
+          @include media-desktop(xl-screen) {
+            padding: 10px 30px;
+          }
+        }
+      }
+      .element-articles {
+        @include media-desktop(xxxl-screen) {
+          left: 80px;
+          top: 100px;
+        }
+        @include media-screens(medium-desktop) {
+          left: 80px;
+          top: 100px;
+        }
+        @include media-desktop(lg-screen) {
+          left: 30px;
+          top: 55px;
+        }
+        position: absolute;
+        left: -20px;
+        top: 84px;
+        z-index: -1;
+        img {
+          @include media-desktop(xxxl-screen) {
+            height: 160px;
+          }
+          @include media-screens(medium-desktop) {
+            height: 140px;
+          }
+          @include media-desktop(lg-screen) {
+            height: 80px;
+          }
+        }
+      }
+    }
+    .element-footer-top {
+      @include media-desktop(xl-screen) {
+        bottom: -30px;
+      }
+      position: absolute;
+      right: 65px;
+      bottom: -45px;
+      img {
+        @include media-desktop(xl-screen) {
+          height: 80px;
+        }
+      }
+    }
+  }
+  footer {
+    .footer-outer {
+      @include media-desktop(xxxl-screen) {
+        padding: 160px;
+      }
+      @include media-screens(medium-desktop) {
+        padding: 140px;
+      }
+      @include media-desktop(xl-screen) {
+        padding: 100px;
+      }
+      @include media-desktop(lg-screen) {
+        padding: 80px;
+        flex-wrap: wrap;
+      }
+      @include media-desktop(sm-screen) {
+        padding: 50px;
+      }
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+      padding: 120px;
+      color: $white-color;
+      .logo-area {
+        @include media-desktop(xxxl-screen) {
+          padding-right: 100px;
+        }
+        @include media-screens(medium-desktop) {
+          padding-right: 80px;
+        }
+        @include media-desktop(sm-screen) {
+          flex: unset;
+          margin-bottom: 20px;
+        }
+        flex: 2;
+        padding-right: 50px;
+        img {
+          @include media-desktop(xl-screen) {
+            height: 30px;
+          }
+          margin-bottom: 30px;
+        }
+        p {
+          @include media-desktop(xxxl-screen) {
+            padding-right: 150px;
+            font-size: $lg-text2;
+            line-height: 28px;
+          }
+          @include media-screens(medium-desktop) {
+            padding-right: 150px;
+            font-size: $lg-text1;
+            line-height: 26px;
+          }
+          @include media-desktop(xl-screen) {
+            font-size: $md-text;
+          }
+          @include media-desktop(lg-screen) {
+            padding-right: 20px;
+          }
+          margin-bottom: 30px;
+          font-size: $default-text;
+          line-height: 24px;
+          padding-right: 100px;
+        }
+        small {
+          @include media-desktop(xxxl-screen) {
+            font-size: $lg-text;
+          }
+          @include media-screens(medium-desktop) {
+            font-size: $default-text;
+          }
+          font-size: $md-text;
+        }
+      }
+      .content-area {
+        flex: 1;
+        h5 {
+          @include media-desktop(xxxl-screen) {
+            font-size: $lg-text1;
+          }
+          @include media-screens(medium-desktop) {
+            font-size: $lg-text;
+          }
+          @include media-desktop(xl-screen) {
+            font-size: $md-text;
+          }
+          font-size: $default-text;
+          margin-bottom: 30px;
+        }
+        ul {
+          list-style-type: none;
+          li {
+            &:first-child {
+              padding-top: 0;
+            }
+            &:last-child {
+              padding-bottom: 0;
+            }
+            padding-block: 5px;
+            a {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $default-text;
+              }
+              @include media-desktop(xl-screen) {
+                font-size: $small-text;
+              }
+              color: $white-color;
+              font-weight: $normal;
+              font-size: $md-text;
+            }
+          }
+        }
+      }
+      .element-footer-bottom {
+        position: absolute;
+        left: 0px;
+        bottom: 2px;
+        img {
+          @include media-desktop(xl-screen) {
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+  .element-services-bg {
+    @include media-desktop(xxxl-screen) {
+      top: 15%;
+    }
+    @include media-screens(medium-desktop) {
+      top: 15.5%;
+    }
+    @include media-desktop(xl-screen) {
+      top: 13.5%;
+    }
+    position: absolute;
+    top: 14.5%;
+    left: 0;
+    z-index: -1;
+    img {
+      @include media-desktop(xxxl-screen) {
+        width: 1000px;
+      }
+      @include media-screens(medium-desktop) {
+        width: 900px;
+      }
+      width: 700px;
+    }
+  }
+  .element-articles-bg {
+    @include media-desktop(xxxl-screen) {
+      top: 71.5%;
+    }
+    @include media-screens(medium-desktop) {
+      top: 72.5%;
+    }
+    @include media-desktop(xl-screen) {
+      top: 75%;
+    }
+    @include media-desktop(lg-screen) {
+      top: 68%;
+    }
+    @include media-desktop(med-screen) {
+      top: 72%;
+    }
+    position: absolute;
+    top: 73%;
+    right: 0px;
+    z-index: -1;
+    img {
+      @include media-desktop(xxxl-screen) {
+        height: 1000px;
+      }
+      @include media-screens(medium-desktop) {
+        height: 800px;
+      }
+      @include media-desktop(xl-screen) {
+        height: 550px;
+      }
+      height: 650px;
+    }
+  }
+}

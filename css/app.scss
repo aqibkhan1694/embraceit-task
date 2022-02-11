@@ -1,0 +1,265 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+// Colors
+$black-color: #000000;
+$primary-color: #458ff6;
+$white-color: #ffffff;
+$gray-color: #7d7987;
+$box-shadow: #e4e8f666;
+$background-color: #e5e5e5;
+
+// Font Sizes
+
+$header-h1: 38px;
+$header-h2: 36px;
+$header-h3: 34px;
+$header-h4: 32px;
+$header-h5: 30px;
+$xxxl-text: 28px;
+$xxl-text: 26px;
+$xl-text: 24px;
+$lg-text3: 22px;
+$lg-text2: 21px;
+$lg-text1: 20px;
+$lg-text: 18px;
+$default-text: 16px;
+$md-text: 14px;
+$small-text: 12px;
+$smaller-text: 11px;
+$ex-small-text: 10px;
+$smallest-text: 9px;
+
+// Custom font sizes
+$custom-font1: 48px;
+$custom-font2: 44px;
+
+// Font Weights
+$light: 300;
+$normal: $light + 100;
+$medium: $light + 200;
+$light-bold: $light + 300;
+$bold: $light + 400;
+$bolder: $light + 500;
+
+.primary-color {
+  color: $primary-color;
+}
+
+// Media Queries for desktop first
+@mixin media-desktop($breakpoint) {
+  @if $breakpoint == xxs-small-screen {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xs-small-screen {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm-screen {
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == med-screen {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg-screen {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl-screen {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxl-screen {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxxl-screen {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}
+
+// Media Queries for specific screen sizes
+@mixin media-screens($breakpoint) {
+  @if $breakpoint == small-screen {
+    @media (min-width: 575px) and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tabpotrait-screen {
+    @media (min-width: 767px) and (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tabland-screen {
+    @media (min-width: 991px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == normal-desktop {
+    @media (min-width: 1200px) and (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == medium-desktop {
+    @media (min-width: 1600px) and (max-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}
+
+// Buttons styles
+button {
+  background-color: transparent;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: $md-text;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: $medium;
+  &:active {
+    box-shadow: none;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.primary-btn {
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  border-radius: 55px;
+  padding: 10px 30px;
+  color: $primary-color;
+  text-transform: inherit;
+  &:hover {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+  &:active {
+    // background-color: $primary-color;
+  }
+}
+.primary-btn-bg {
+  background-color: $primary-color;
+  border-radius: 55px;
+  border: 1px solid $primary-color;
+  padding: 10px 30px;
+  color: $white-color;
+  text-transform: inherit;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  &:active {
+    // background-color: $primary-color;
+  }
+}
+
+a {
+  text-decoration: unset;
+  text-transform: inherit;
+}
+
+h1 {
+  @include media-desktop(xxxl-screen) {
+    font-size: $custom-font1;
+  }
+  @include media-screens(medium-desktop) {
+    font-size: $custom-font2;
+  }
+  @include media-desktop(xl-screen) {
+    font-size: $header-h2;
+  }
+  @include media-desktop(lg-screen) {
+    font-size: $header-h4;
+  }
+  @include media-desktop(sm-screen) {
+    font-size: $xxxl-text;
+  }
+  color: $black-color;
+  font-size: $header-h1;
+  font-weight: $bold;
+}
+h2 {
+  @include media-desktop(xl-screen) {
+    font-size: $header-h4;
+  }
+  @include media-desktop(lg-screen) {
+    font-size: $xxl-text;
+  }
+  @include media-desktop(med-screen) {
+    font-size: $xl-text;
+  }
+  @include media-desktop(sm-screen) {
+    font-size: $lg-text3;
+  }
+  font-size: $header-h2;
+  font-weight: $bold;
+  color: $black-color;
+}
+h3 {
+  font-size: $header-h3;
+  font-weight: $bold;
+  color: $white-color;
+}
+.hr-center {
+  width: 50px;
+  margin: 0 auto;
+  border: 1px solid $black-color;
+}
+.hr-center-white-bg {
+  width: 50px;
+  margin: 0 auto;
+  border: 1px solid $white-color;
+}
+.hr-left {
+  width: 50px;
+  margin-block: 20px;
+  border: 1px solid $black-color;
+}
